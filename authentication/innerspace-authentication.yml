@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.innerspace.io/authentication-v2
+docs: https://developers.innerspace.io/authentication-v2
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+  session_token: true
+  note: >-
+    OAuth 2.0 client-credentials exchange returns a session_id (not a bearer
+    access_token). The session_id is supplied on every subsequent GraphQL call
+    via the X-Session-Id header. Sessions expire; clients re-authenticate on 401.
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  token_url: https://api.innerspace.io/v2/oauth/token
+  audience: https://global-config.innerspace.io
+  request_fields:
+  - client_id
+  - client_secret
+  - audience
+  returns: session_id
+  sources:
+  - docs:authentication-v2
+- name: SessionHeader
+  type: apiKey
+  in: header
+  parameter_name: X-Session-Id
+  description: Session token returned by the /v2/oauth/token exchange, sent on all
+    subsequent calls to https://api.innerspace.io/v2/api
+  sources:
+  - docs:authentication-v2
+credentials_provisioning: Contact sales@innerspace.io to obtain a ClientID and ClientSecret;
+  API access is limited to customers with an active contract.
