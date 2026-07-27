@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://developers.innerspace.io/api-reference-v2
+note: >-
+  No official InnerSpace MCP server was found. This is a candidate tool list derived
+  from the documented v2 GraphQL query surface, one tool per read operation. Auth
+  would bridge the OAuth 2.0 client-credentials -> X-Session-Id session model.
+server:
+  name: innerspace
+  transport: http
+  auth: oauth2-client-credentials-session (X-Session-Id)
+tools:
+- name: list_sites
+  description: List sites (top-level locations).
+  source_operation: graphql:sites
+- name: list_buildings
+  description: List buildings within sites.
+  source_operation: graphql:buildings
+- name: list_floors
+  description: List floors within buildings.
+  source_operation: graphql:floors
+- name: list_zones
+  description: List zones (floorplan polygons).
+  source_operation: graphql:zones
+- name: get_zone_set
+  description: Retrieve a named set of zones.
+  source_operation: graphql:zone_set
+- name: list_groups
+  description: List reporting groups.
+  source_operation: graphql:groups
+- name: get_building_insights
+  description: Occupancy/utilization insights aggregated at building level.
+  source_operation: graphql:building_insights
+- name: get_zone_insights
+  description: Occupancy/utilization insights at zone level.
+  source_operation: graphql:zone_insights
+- name: get_zone_type_insights
+  description: Occupancy/utilization insights aggregated by zone type.
+  source_operation: graphql:zone_type_insights

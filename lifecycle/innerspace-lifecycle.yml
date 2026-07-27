@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.innerspace.io/
+versioning:
+  scheme: uri-path
+  current: v2
+  released: '2025-05'
+  docs: https://developers.innerspace.io/api-reference-v2
+deprecation:
+  policy: >-
+    InnerSpace publishes a dated deprecated-API section. The v1 and v1.5 GraphQL
+    surfaces were deprecated on 2025-05-26 in favor of v2; deprecated reference docs
+    are retained under the deprecated-api-2025-05-26 path.
+  announced: '2025-05-26'
+  deprecated_versions:
+  - v1
+  - v1.5
+  docs: https://developers.innerspace.io/deprecated-api-2025-05-26
+sla:
+  documented: false
+status_page:
+  found: false
+  note: No public status page resolved (status.innerspace.io did not respond).
+roadmap:
+  found: false
+  planned_operations:
+  - zone_occupancy (realtime) [TBD]
+  - zone_occupancy (nightly) [TBD]
+  note: The v2 reference marks several occupancy operations as TBD/forthcoming.

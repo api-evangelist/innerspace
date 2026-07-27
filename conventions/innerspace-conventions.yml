@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.innerspace.io/
+docs: https://developers.innerspace.io/
+api_style: graphql
+endpoint: https://api.innerspace.io/v2/api
+authentication:
+  style: oauth2-client-credentials-session
+  header: X-Session-Id
+  token_url: https://api.innerspace.io/v2/oauth/token
+  ref: authentication/innerspace-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  released: '2025-05'
+  deprecated:
+  - v1.5
+  - v1
+  ref: lifecycle/innerspace-lifecycle.yml
+error_envelope:
+  style: graphql-errors
+  shape: '{ "errors": [ { "message": string, "extensions": { "path": string, "code":
+    string } } ] }'
+  ref: errors/innerspace-problem-types.yml
+idempotency:
+  supported: false
+  note: >-
+    The v2 surface is a read-only GraphQL insights API; the documentation defines no
+    idempotency-key contract, so no Idempotency pointer is emitted.
+pagination:
+  documented: false
+  note: Not documented in the public v2 reference; insights queries are filtered by
+    partition/date, building_id, site_id, group_id, and granularity.
+granularity:
+  documented: true
+  ref: https://developers.innerspace.io/granularity
+  note: Insights queries accept a granularity parameter controlling the time bucket
+    of returned metrics.
+datetime:
+  documented: true
+  ref: https://developers.innerspace.io/datetime
+  note: Dedicated DateTime conventions page governs how timestamps and date partitions
+    are expressed.
+grouping:
+  documented: true
+  ref: https://developers.innerspace.io/groups
+  note: Groups (UUID-identified) organize zones/spaces for aggregated reporting.
+rate_limiting:
+  documented: false
+retry:
+  guidance: Re-authenticate at /v2/oauth/token and retry on 401 (expired session).

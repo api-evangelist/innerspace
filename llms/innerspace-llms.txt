@@ -1,0 +1,39 @@
+# InnerSpace API
+
+## InnerSpace API
+
+- [Overview](https://developers.innerspace.io/master.md)
+- [Metrics and Features](https://developers.innerspace.io/metrics-and-features.md): What insights are available in the API?
+- [Groups](https://developers.innerspace.io/groups.md)
+- [Authentication (v2)](https://developers.innerspace.io/authentication-v2.md): How to authenticate to the InnerSpace API
+- [Granularity](https://developers.innerspace.io/granularity.md)
+- [DateTime](https://developers.innerspace.io/datetime.md)
+- [GraphQL Playground](https://developers.innerspace.io/graphql-playground.md)
+- [API Reference (v2)](https://developers.innerspace.io/api-reference-v2.md): Description of the core GraphQL API calls (2025-05)
+- [building\_insights](https://developers.innerspace.io/api-reference-v2/building_insights.md)
+- [zone\_insights](https://developers.innerspace.io/api-reference-v2/zone_insights.md)
+- [zone\_type\_insights](https://developers.innerspace.io/api-reference-v2/zone_type_insights.md)
+- [buildings](https://developers.innerspace.io/api-reference-v2/buildings.md)
+- [floors](https://developers.innerspace.io/api-reference-v2/floors.md)
+- [sites](https://developers.innerspace.io/api-reference-v2/sites.md)
+- [groups](https://developers.innerspace.io/api-reference-v2/groups.md)
+- [zones](https://developers.innerspace.io/api-reference-v2/zones.md)
+- [zone\_set](https://developers.innerspace.io/api-reference-v2/zone_set.md)
+- [zone\_occupancy (realtime) \[TBD\]](https://developers.innerspace.io/api-reference-v2/zone_occupancy-realtime-tbd.md): Realtime zone occupancy
+- [zone\_occupancy (nightly) \[TBD\]](https://developers.innerspace.io/api-reference-v2/zone_occupancy-nightly-tbd.md)
+- [Deprecated API (2025-05-26)](https://developers.innerspace.io/deprecated-api-2025-05-26.md)
+- [Authentication (v1.5 - deprecated)](https://developers.innerspace.io/deprecated-api-2025-05-26/authentication-v1.5-deprecated.md): How to authenticate to the InnerSpace API
+- [Authentication (v1 - deprecated)](https://developers.innerspace.io/deprecated-api-2025-05-26/authentication-v1-deprecated.md): How to authenticate to the InnerSpace API
+- [API Reference (v1 - deprecated)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated.md): Description of the core GraphQL API calls
+- [zone\_occupancy (realtime)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/zone_occupancy-realtime.md): Realtime zone occupancy
+- [zone\_metrics (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/zone_metrics-nightly.md)
+- [zone\_features (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/zone_features-nightly.md)
+- [site\_metrics (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/site_metrics-nightly.md)
+- [site\_features (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/site_features-nightly.md)
+- [building\_metrics (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/building_metrics-nightly.md)
+- [building\_features (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/building_features-nightly.md)
+- [zone\_occupancy (nightly)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/zone_occupancy-nightly.md)
+- [groups (nightly) (TBD)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/groups-nightly-tbd.md)
+- [buildings (nightly) (TBD)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/buildings-nightly-tbd.md)
+- [sites (nightly) (TBD)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/sites-nightly-tbd.md)
+- [zones (nightly) (TBD)](https://developers.innerspace.io/deprecated-api-2025-05-26/api-reference-v1-deprecated/zones-nightly-tbd.md)

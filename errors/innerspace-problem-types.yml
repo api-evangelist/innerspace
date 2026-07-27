@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: derived
+source: https://developers.innerspace.io/ + live probe of https://api.innerspace.io/v2/api
+format: graphql-errors
+envelope:
+  field: errors
+  shape: '{ "errors": [ { "message": string, "extensions": { "path": string, "code":
+    string } } ] }'
+note: >-
+  InnerSpace v2 is a GraphQL API; errors are returned in the GraphQL top-level
+  "errors" array with a machine-readable extensions.code rather than as RFC 9457
+  problem+json. The catalog below combines the observed transport envelope with the
+  documented HTTP auth failure modes.
+problems:
+- code: not-supported
+  transport: 200
+  title: Operation not supported
+  detail: Returned by the GraphQL endpoint when a request cannot be served as posed
+    (observed for non-GraphQL paths, e.g. "Automatic Persisted Queries is not enabled").
+  source: live probe https://api.innerspace.io/v2/api
+- status: 401
+  title: Unauthorized / session expired
+  detail: The X-Session-Id session token is missing, invalid, or expired. Re-authenticate
+    at https://api.innerspace.io/v2/oauth/token and retry.
+  remediation: Exchange client_id/client_secret again for a fresh session_id.
+  source: https://developers.innerspace.io/authentication-v2
+- status: 403
+  title: Forbidden
+  detail: Authenticated but the contract/entitlement does not grant access to the
+    requested site, building, or dataset.
+  source: derived from contract-scoped access model

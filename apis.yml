@@ -1,7 +1,29 @@
 aid: innerspace
 name: InnerSpace
-description: InnerSpace is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: InnerSpace (InnerSpace Technologies Inc.) is a workplace analytics company
+  that measures how physical space is used by leveraging a building's existing Wi-Fi
+  infrastructure rather than dedicated occupancy sensors. Its patented Predictive Hyperbolic
+  Location Fingerprinting (PHLF) technology locates and counts people to within roughly
+  four feet to reveal occupancy, movement, and space-utilization patterns across sites,
+  buildings, floors, and zones. The InnerSpace platform serves hybrid-workplace management,
+  real-estate portfolio optimization, higher-education, and employee-experience use
+  cases for enterprises including Microsoft, KPMG, Indeed, and LinkedIn. A GraphQL API
+  (v2) at api.innerspace.io exposes building, zone, site, floor, group, and insights
+  data to customers with active contracts, authenticated via an OAuth 2.0 client-credentials
+  exchange that returns a session token.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://innerspace.io/hubfs/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/innerspace/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +33,40 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Workplace Analytics
+- Occupancy
+- Space Utilization
+- Real Estate
+- Wi-Fi Location
+- Building Insights
+- GraphQL
+- Hybrid Workplace
+- PropTech
+apis:
+- name: InnerSpace API v2
+  description: GraphQL API exposing occupancy and space-utilization insights across
+    sites, buildings, floors, zones, and groups. Available to customers with an active
+    contract; authenticated with OAuth 2.0 client credentials that return a session
+    token supplied as the X-Session-Id header.
+  humanURL: https://developers.innerspace.io/
+  baseURL: https://api.innerspace.io/v2/api
+  tags:
+  - GraphQL
+  - Occupancy
+  - Building Insights
+  - Space Utilization
+  properties:
+  - type: Documentation
+    url: https://developers.innerspace.io/
+  - type: APIReference
+    url: https://developers.innerspace.io/api-reference-v2
+  - type: GettingStarted
+    url: https://developers.innerspace.io/master
+  - type: Authentication
+    url: https://developers.innerspace.io/authentication-v2
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +75,56 @@ maintainers:
 common:
 - type: Website
   url: https://innerspace.io
+- type: DeveloperPortal
+  url: https://developers.innerspace.io/
+- type: Documentation
+  url: https://developers.innerspace.io/
+- type: APIReference
+  url: https://developers.innerspace.io/api-reference-v2
+- type: GettingStarted
+  url: https://developers.innerspace.io/master
+- type: Authentication
+  url: authentication/innerspace-authentication.yml
+- type: Blog
+  url: https://blog.innerspace.io
+- type: Pricing
+  url: https://innerspace.io/pricing
+- type: Support
+  url: https://innerspace.io/contact
+- type: TermsOfService
+  url: https://www.innerspace.io/terms
+- type: PrivacyPolicy
+  url: https://innerspace.io/privacy
+- type: TrustCenter
+  url: https://innerspace.io/trust
+- type: Compliance
+  url: https://innerspace.io/trust
+- type: Security
+  url: https://www.innerspace.io/responsible-disclosure-policy
+- type: VulnerabilityDisclosure
+  url: security/innerspace-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/innerspace-llms.txt
+- type: Conventions
+  url: conventions/innerspace-conventions.yml
+- type: ErrorCatalog
+  url: errors/innerspace-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/innerspace-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/innerspace-lifecycle.yml
+- type: Conformance
+  url: conformance/innerspace-conformance.yml
+- type: DataModel
+  url: data-model/innerspace-data-model.yml
+- type: DomainSecurity
+  url: security/innerspace-domain-security.yml
+- type: TrustCenter
+  url: security/innerspace-trust-center.yml
+- type: MCPServer
+  url: mcp/innerspace-mcp.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,79 @@
+generated: '2026-07-19'
+method: derived
+source: https://developers.innerspace.io/api-reference-v2
+note: >-
+  Entity graph derived from the documented v2 GraphQL query surface and the described
+  spatial hierarchy (site -> building -> floor -> zone), plus groups and the insights
+  result types. No OpenAPI is published (GraphQL API); id-prefix/domain detail is not
+  documented publicly.
+entities:
+- name: site
+  query: sites
+  description: Top-level physical location / campus.
+- name: building
+  query: buildings
+  description: A building within a site.
+- name: floor
+  query: floors
+  description: A floor within a building.
+- name: zone
+  query: zones
+  description: A polygon drawn on a floorplan defining a measurable space.
+- name: zone_set
+  query: zone_set
+  description: A named collection of zones.
+- name: zone_type
+  query: zone_type_insights
+  description: A classification of zones (e.g. meeting room, desk area) used for typed
+    insights.
+- name: group
+  query: groups
+  id: uuid
+  description: Organizational grouping of zones/spaces for aggregated reporting.
+- name: building_insights
+  query: building_insights
+  description: Occupancy/utilization metrics aggregated at building level (occupancy
+    mean, datetime, granularity).
+- name: zone_insights
+  query: zone_insights
+  description: Occupancy/utilization metrics at zone level.
+- name: zone_type_insights
+  query: zone_type_insights
+  description: Occupancy/utilization metrics aggregated by zone type.
+relationships:
+- from: building
+  to: site
+  kind: belongs_to
+  via: site_id
+- from: floor
+  to: building
+  kind: belongs_to
+  via: building_id
+- from: zone
+  to: floor
+  kind: belongs_to
+  via: floor
+- from: zone
+  to: zone_type
+  kind: belongs_to
+  via: zone_type
+- from: zone_set
+  to: zone
+  kind: has_many
+  via: zones
+- from: group
+  to: zone
+  kind: has_many
+  via: zones
+- from: building_insights
+  to: building
+  kind: belongs_to
+  via: building_id
+- from: zone_insights
+  to: zone
+  kind: belongs_to
+  via: zone_id
+- from: zone_type_insights
+  to: zone_type
+  kind: belongs_to
+  via: zone_type
