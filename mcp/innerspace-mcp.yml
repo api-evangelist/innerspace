@@ -2,10 +2,9 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: https://developers.innerspace.io/api-reference-v2
-note: >-
-  No official InnerSpace MCP server was found. This is a candidate tool list derived
-  from the documented v2 GraphQL query surface, one tool per read operation. Auth
-  would bridge the OAuth 2.0 client-credentials -> X-Session-Id session model.
+note: No official InnerSpace MCP server was found. This is a candidate tool list derived from the documented
+  v2 GraphQL query surface, one tool per read operation. Auth would bridge the OAuth 2.0 client-credentials
+  -> X-Session-Id session model.
 server:
   name: innerspace
   transport: http
@@ -38,3 +37,9 @@ tools:
 - name: get_zone_type_insights
   description: Occupancy/utilization insights aggregated by zone type.
   source_operation: graphql:zone_type_insights
+deployment:
+  mode: none
+  verified: derived
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
