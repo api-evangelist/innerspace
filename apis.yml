@@ -45,12 +45,15 @@ x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
+x-docs-platform: gitbook
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-10-03
 tags:
 - Company
 - Workplace Analytics
 - Occupancy
 - Space Utilization
-- Real-Estate
+- Real Estate
 - Wi-Fi Location
 - Building Insights
 - GraphQL
@@ -67,6 +70,7 @@ tags_raw:
 - GraphQL
 - Hybrid Workplace
 - PropTech
+- Real-Estate
 apis:
 - name: InnerSpace API v2
   description: GraphQL API exposing occupancy and space-utilization insights across
