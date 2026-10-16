@@ -1,0 +1,21 @@
+{
+  "repo": "innerspace",
+  "feeds": [
+    {
+      "source": "https://blog.innerspace.io/rss.xml",
+      "feed_url": "https://blog.innerspace.io/rss.xml",
+      "title": "",
+      "saved": 1,
+      "method": "feed"
+    },
+    {
+      "source": "https://blog.innerspace.io",
+      "feed_url": "https://blog.innerspace.io/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-10-10T13:15:00Z"
+}
