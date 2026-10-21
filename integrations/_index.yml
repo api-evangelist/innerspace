@@ -32,3 +32,16 @@
     year: '2016'
   status: not-a-workflow
   arazzo: null
+- slug: innerspace-cisco-own
+  label: Cisco (own)
+  partner: cisco
+  partner_name: Cisco (own)
+  category: Smart Workspace
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.cisco.com/en-US/apps/381729
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
